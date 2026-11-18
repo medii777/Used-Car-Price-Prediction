@@ -1,0 +1,251 @@
+Car_Name,Year,Selling_Price_ETB,Present_Price_ETB,Kms_Driven,Fuel_Type,Seller_Type,Transmission,Owner
+Toyota Corolla,2015,3800000,5200000,85000,Petrol,Dealer,Manual,0
+Toyota Corolla,2018,4800000,5700000,45000,Petrol,Dealer,Manual,0
+Toyota Corolla,2020,5200000,6000000,30000,Petrol,Dealer,Manual,0
+Toyota Corolla,2012,3200000,5200000,120000,Petrol,Dealer,Manual,0
+Toyota Corolla,2010,2900000,5200000,150000,Petrol,Individual,Manual,1
+Toyota Corolla,2008,2600000,5200000,180000,Petrol,Individual,Manual,1
+Toyota Corolla,2005,2300000,5200000,210000,Petrol,Individual,Manual,2
+Toyota Corolla,2022,5600000,6200000,15000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2019,5000000,5900000,38000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2016,4100000,5400000,72000,Petrol,Dealer,Manual,0
+Toyota Corolla,2014,3600000,5200000,95000,Petrol,Dealer,Manual,0
+Toyota Corolla,2013,3300000,5200000,110000,Petrol,Individual,Manual,0
+Toyota Corolla,2007,2500000,5200000,195000,Petrol,Individual,Manual,2
+Toyota Corolla,2021,5400000,6100000,22000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2017,4400000,5500000,60000,Petrol,Dealer,Manual,0
+Toyota Corolla,2011,3000000,5200000,135000,Petrol,Dealer,Manual,1
+Toyota Corolla,2003,2100000,5200000,240000,Petrol,Individual,Manual,3
+Toyota Corolla,2006,2400000,5200000,200000,Petrol,Individual,Manual,2
+Toyota Corolla,2023,5700000,6400000,8000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2009,2750000,5200000,165000,Petrol,Dealer,Manual,1
+Toyota Hilux,2015,6800000,9500000,95000,Diesel,Dealer,Manual,0
+Toyota Hilux,2018,8500000,11000000,55000,Diesel,Dealer,Manual,0
+Toyota Hilux,2020,10000000,12000000,30000,Diesel,Dealer,Manual,0
+Toyota Hilux,2022,11000000,12500000,18000,Diesel,Dealer,Automatic,0
+Toyota Hilux,2012,5700000,9500000,130000,Diesel,Dealer,Manual,1
+Toyota Hilux,2010,5500000,9000000,155000,Diesel,Individual,Manual,1
+Toyota Hilux,2016,7500000,10000000,78000,Diesel,Dealer,Manual,0
+Toyota Hilux,2019,9200000,11500000,42000,Diesel,Dealer,Automatic,0
+Toyota Hilux,2013,6000000,9500000,118000,Diesel,Dealer,Manual,0
+Toyota Hilux,2014,6500000,9500000,100000,Diesel,Dealer,Manual,0
+Toyota Hilux,2021,10500000,12200000,24000,Diesel,Dealer,Automatic,0
+Toyota Hilux,2017,8000000,10500000,68000,Diesel,Dealer,Manual,0
+Toyota Hilux,2024,11500000,13000000,5000,Diesel,Dealer,Automatic,0
+Toyota Hilux,2011,5600000,9200000,140000,Diesel,Individual,Manual,1
+Toyota Hilux,2023,11200000,12800000,10000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2015,18000000,25000000,88000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2018,22000000,28000000,50000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2020,26000000,30000000,28000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2012,15000000,25000000,125000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2010,13000000,24000000,158000,Diesel,Individual,Automatic,1
+Toyota Land Cruiser,2016,19500000,26000000,72000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2019,24000000,29000000,38000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2022,28000000,32000000,15000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2013,16000000,25000000,110000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2021,27000000,31000000,20000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2008,11000000,24000000,190000,Diesel,Individual,Manual,2
+Toyota Land Cruiser,2023,29000000,33000000,8000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2017,21000000,27000000,62000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2014,17000000,25000000,95000,Diesel,Dealer,Automatic,0
+Toyota Land Cruiser,2024,30000000,35000000,3000,Diesel,Dealer,Automatic,0
+Toyota Vitz,2014,2200000,3500000,88000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2016,2600000,3700000,62000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2018,3000000,3900000,40000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2012,1900000,3400000,115000,Petrol,Individual,Automatic,1
+Toyota Vitz,2010,1700000,3300000,140000,Petrol,Individual,Automatic,1
+Toyota Vitz,2020,3300000,4100000,28000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2013,2050000,3500000,100000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2015,2400000,3600000,75000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2017,2800000,3800000,55000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2019,3100000,4000000,35000,Petrol,Dealer,Automatic,0
+Toyota Fortuner,2016,12000000,16000000,75000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2018,14500000,18000000,48000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2020,17000000,20000000,28000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2013,9500000,15000000,115000,Diesel,Dealer,Automatic,1
+Toyota Fortuner,2015,11000000,16000000,88000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2019,15500000,19000000,38000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2022,19000000,22000000,15000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2014,10000000,15500000,100000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2017,13000000,17000000,62000,Diesel,Dealer,Automatic,0
+Toyota Fortuner,2021,18000000,21000000,22000,Diesel,Dealer,Automatic,0
+Hyundai i10,2015,1950000,2900000,70000,Petrol,Dealer,Manual,0
+Hyundai i10,2017,2200000,3100000,48000,Petrol,Dealer,Manual,0
+Hyundai i10,2019,2600000,3400000,30000,Petrol,Dealer,Manual,0
+Hyundai i10,2012,1650000,2800000,100000,Petrol,Individual,Manual,1
+Hyundai i10,2010,1500000,2700000,130000,Petrol,Individual,Manual,1
+Hyundai i10,2014,1850000,2900000,78000,Petrol,Dealer,Manual,0
+Hyundai i10,2016,2100000,3000000,58000,Petrol,Dealer,Manual,0
+Hyundai i10,2018,2400000,3200000,42000,Petrol,Dealer,Manual,0
+Hyundai i10,2020,2800000,3600000,22000,Petrol,Dealer,Automatic,0
+Hyundai i10,2013,1750000,2850000,88000,Petrol,Dealer,Manual,0
+Hyundai i10,2022,3200000,4000000,12000,Petrol,Dealer,Automatic,0
+Hyundai i10,2021,3000000,3800000,18000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2016,4200000,6000000,72000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2018,5000000,6800000,48000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2020,5600000,7200000,28000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2013,3500000,5800000,108000,Petrol,Dealer,Manual,1
+Hyundai Avante,2015,3900000,5900000,85000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2019,5300000,7000000,38000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2017,4600000,6400000,60000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2021,5800000,7500000,20000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2014,3700000,5850000,95000,Petrol,Dealer,Manual,0
+Hyundai Avante,2022,6000000,7800000,12000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2016,6500000,9000000,70000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2018,7800000,10500000,45000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2020,9200000,12000000,28000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2014,5500000,8500000,100000,Petrol,Dealer,Automatic,1
+Hyundai Tucson,2019,8500000,11500000,35000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2021,10000000,13000000,18000,Diesel,Dealer,Automatic,0
+Hyundai Tucson,2015,6000000,8800000,82000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2022,11000000,14000000,10000,Diesel,Dealer,Automatic,0
+Hyundai Tucson,2017,7200000,9800000,60000,Petrol,Dealer,Automatic,0
+Hyundai Tucson,2023,12000000,15000000,5000,Diesel,Dealer,Automatic,0
+Suzuki Dzire,2015,2500000,3800000,72000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2017,2900000,4000000,50000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2019,3300000,4300000,32000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2013,2200000,3600000,98000,Petrol,Individual,Manual,1
+Suzuki Dzire,2016,2700000,3900000,62000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2018,3100000,4200000,42000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2020,3500000,4500000,22000,Petrol,Dealer,Automatic,0
+Suzuki Dzire,2014,2350000,3700000,85000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2021,3700000,4700000,15000,Petrol,Dealer,Automatic,0
+Suzuki Dzire,2022,3900000,4900000,8000,Petrol,Dealer,Automatic,0
+Suzuki Swift,2014,2300000,3600000,75000,Petrol,Dealer,Manual,0
+Suzuki Swift,2016,2600000,3800000,58000,Petrol,Dealer,Manual,0
+Suzuki Swift,2018,2950000,4100000,40000,Petrol,Dealer,Manual,0
+Suzuki Swift,2012,2000000,3500000,100000,Petrol,Individual,Manual,1
+Suzuki Swift,2015,2450000,3700000,68000,Petrol,Dealer,Manual,0
+Suzuki Swift,2019,3100000,4200000,30000,Petrol,Dealer,Manual,0
+Suzuki Swift,2017,2750000,3950000,52000,Petrol,Dealer,Manual,0
+Suzuki Swift,2020,3300000,4400000,20000,Petrol,Dealer,Automatic,0
+Suzuki Swift,2021,3500000,4600000,12000,Petrol,Dealer,Automatic,0
+Suzuki Swift,2013,2150000,3550000,88000,Petrol,Individual,Manual,1
+Suzuki Ertiga,2016,3200000,4800000,68000,Petrol,Dealer,Manual,0
+Suzuki Ertiga,2018,3800000,5200000,45000,Petrol,Dealer,Manual,0
+Suzuki Ertiga,2020,4300000,5600000,28000,Petrol,Dealer,Automatic,0
+Suzuki Ertiga,2014,2900000,4600000,92000,Petrol,Dealer,Manual,1
+Suzuki Ertiga,2017,3500000,5000000,58000,Petrol,Dealer,Manual,0
+Suzuki Ertiga,2019,4000000,5400000,35000,Petrol,Dealer,Automatic,0
+Suzuki Ertiga,2015,3050000,4700000,78000,Petrol,Dealer,Manual,0
+Suzuki Ertiga,2021,4600000,5900000,18000,Petrol,Dealer,Automatic,0
+Nissan Patrol,2015,14000000,20000000,88000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2018,18000000,24000000,52000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2020,22000000,27000000,30000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2012,11000000,19000000,125000,Diesel,Individual,Automatic,1
+Nissan Patrol,2016,16000000,22000000,72000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2019,20000000,25500000,42000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2022,24000000,29000000,15000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2013,12000000,19500000,110000,Diesel,Dealer,Automatic,1
+Nissan Patrol,2017,17000000,23000000,65000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2021,23000000,28000000,22000,Diesel,Dealer,Automatic,0
+Honda Accord,2015,5500000,8000000,78000,Petrol,Dealer,Automatic,0
+Honda Accord,2017,6500000,9000000,55000,Petrol,Dealer,Automatic,0
+Honda Accord,2019,7800000,10500000,35000,Petrol,Dealer,Automatic,0
+Honda Accord,2013,4500000,7500000,108000,Petrol,Individual,Automatic,1
+Honda Accord,2016,6000000,8500000,68000,Petrol,Dealer,Automatic,0
+Honda Accord,2018,7200000,9800000,45000,Petrol,Dealer,Automatic,0
+Honda Accord,2020,8500000,11000000,25000,Petrol,Dealer,Automatic,0
+Honda Accord,2014,5000000,7800000,92000,Petrol,Dealer,Automatic,0
+Honda Accord,2021,9000000,11500000,18000,Petrol,Dealer,Automatic,0
+Honda Accord,2022,9500000,12000000,10000,Petrol,Dealer,Automatic,0
+Volkswagen Golf,2015,5800000,8500000,75000,Petrol,Dealer,Manual,0
+Volkswagen Golf,2017,7000000,10000000,52000,Petrol,Dealer,Manual,0
+Volkswagen Golf,2019,8500000,11500000,32000,Petrol,Dealer,Automatic,0
+Volkswagen Golf,2013,4800000,8000000,105000,Petrol,Individual,Manual,1
+Volkswagen Golf,2016,6400000,9200000,65000,Petrol,Dealer,Manual,0
+Volkswagen Golf,2018,7700000,10800000,45000,Petrol,Dealer,Automatic,0
+Volkswagen Golf,2020,9200000,12000000,24000,Petrol,Dealer,Automatic,0
+Volkswagen Golf,2014,5300000,8200000,90000,Petrol,Dealer,Manual,0
+Toyota RAV4,2015,8000000,12000000,82000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2017,10000000,13500000,58000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2019,12500000,15000000,35000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2013,6500000,11500000,115000,Petrol,Dealer,Automatic,1
+Toyota RAV4,2016,9000000,12800000,70000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2018,11200000,14200000,48000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2020,13800000,16000000,25000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2014,7200000,11800000,98000,Petrol,Dealer,Automatic,0
+Toyota RAV4,2021,15000000,17500000,18000,Diesel,Dealer,Automatic,0
+Toyota RAV4,2022,16000000,18500000,10000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2014,10000000,15000000,95000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2016,12500000,17000000,72000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2018,15000000,19000000,48000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2012,8500000,14500000,125000,Diesel,Individual,Automatic,1
+Mitsubishi Pajero,2015,11200000,16000000,85000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2019,16500000,20000000,35000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2020,18000000,21500000,25000,Diesel,Dealer,Automatic,0
+Mitsubishi Pajero,2013,9500000,14800000,110000,Diesel,Dealer,Automatic,1
+Hyundai Santa Fe,2015,8500000,12500000,80000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2017,10500000,14000000,58000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2019,12500000,16000000,35000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2013,7000000,12000000,112000,Diesel,Individual,Automatic,1
+Hyundai Santa Fe,2016,9500000,13200000,70000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2018,11500000,15000000,48000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2020,13800000,17000000,25000,Diesel,Dealer,Automatic,0
+Hyundai Santa Fe,2021,15000000,18000000,18000,Diesel,Dealer,Automatic,0
+Toyota Camry,2015,6500000,10000000,80000,Petrol,Dealer,Automatic,0
+Toyota Camry,2017,8000000,11500000,58000,Petrol,Dealer,Automatic,0
+Toyota Camry,2019,9500000,12500000,35000,Petrol,Dealer,Automatic,0
+Toyota Camry,2013,5500000,9500000,110000,Petrol,Individual,Automatic,1
+Toyota Camry,2016,7200000,10800000,70000,Petrol,Dealer,Automatic,0
+Toyota Camry,2018,8800000,12000000,48000,Petrol,Dealer,Automatic,0
+Toyota Camry,2020,10500000,13500000,25000,Petrol,Dealer,Automatic,0
+Toyota Camry,2021,11200000,14000000,18000,Petrol,Dealer,Automatic,0
+Toyota Camry,2022,12000000,15000000,10000,Petrol,Dealer,Automatic,0
+Toyota Camry,2014,6000000,9800000,95000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2004,2200000,5200000,220000,Petrol,Individual,Manual,3
+Toyota Hilux,2009,5200000,9000000,168000,Diesel,Individual,Manual,2
+Hyundai i10,2011,1600000,2750000,118000,Petrol,Individual,Manual,2
+Suzuki Dzire,2012,2100000,3550000,108000,Petrol,Individual,Manual,1
+Toyota Corolla,2024,5900000,6600000,3000,Petrol,Dealer,Automatic,0
+Toyota Hilux,2008,5000000,9000000,175000,Diesel,Individual,Manual,2
+Hyundai Avante,2012,3200000,5700000,120000,Petrol,Individual,Manual,1
+Suzuki Ertiga,2013,2750000,4500000,105000,Petrol,Individual,Manual,1
+Toyota Land Cruiser,2006,9500000,24000000,220000,Diesel,Individual,Manual,3
+Toyota Fortuner,2011,8500000,15000000,138000,Diesel,Individual,Automatic,1
+Honda Accord,2012,4200000,7400000,122000,Petrol,Individual,Automatic,1
+Nissan Patrol,2010,10500000,18500000,142000,Diesel,Individual,Automatic,2
+Toyota RAV4,2012,6200000,11500000,128000,Petrol,Individual,Automatic,1
+Hyundai Tucson,2013,5200000,8300000,112000,Petrol,Individual,Automatic,1
+Toyota Camry,2011,5200000,9400000,128000,Petrol,Individual,Automatic,2
+Suzuki Swift,2011,1950000,3500000,112000,Petrol,Individual,Manual,1
+Toyota Vitz,2011,1750000,3300000,128000,Petrol,Individual,Automatic,1
+Volkswagen Golf,2012,4600000,7900000,118000,Petrol,Individual,Manual,1
+Toyota Corolla,2016,4200000,5350000,68000,Petrol,Dealer,Automatic,0
+Toyota Hilux,2016,7800000,10200000,75000,Diesel,Dealer,Manual,0
+Hyundai i10,2016,2050000,2980000,55000,Petrol,Dealer,Manual,0
+Suzuki Dzire,2016,2650000,3870000,60000,Petrol,Dealer,Manual,0
+Toyota Vitz,2016,2550000,3680000,60000,Petrol,Dealer,Automatic,0
+Toyota Fortuner,2016,11500000,16200000,78000,Diesel,Dealer,Automatic,0
+Toyota RAV4,2016,9200000,12900000,68000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2016,4400000,6200000,68000,Petrol,Dealer,Automatic,0
+Toyota Corolla,2020,5100000,5950000,32000,Petrol,Dealer,Automatic,0
+Toyota Hilux,2020,10200000,11800000,32000,Diesel,Dealer,Automatic,0
+Suzuki Swift,2020,3250000,4380000,22000,Petrol,Dealer,Automatic,0
+Toyota Vitz,2020,3200000,4050000,30000,Petrol,Dealer,Automatic,0
+Hyundai Avante,2020,5500000,7100000,30000,Petrol,Dealer,Automatic,0
+Toyota Fortuner,2020,16800000,19800000,30000,Diesel,Dealer,Automatic,0
+Nissan Patrol,2020,21500000,26800000,32000,Diesel,Dealer,Automatic,0
+BYD Atto 3,2023,5200000,6500000,18000,Petrol,Dealer,Automatic,0
+BYD Atto 3,2024,5800000,7000000,8000,Petrol,Dealer,Automatic,0
+BYD Atto 3,2022,4800000,6500000,30000,Petrol,Dealer,Automatic,0
+BYD Atto 3,2023,5000000,6500000,22000,Petrol,Individual,Automatic,0
+BYD Seal,2023,6500000,8000000,15000,Petrol,Dealer,Automatic,0
+BYD Seal,2024,7200000,8500000,5000,Petrol,Dealer,Automatic,0
+BYD Seal,2023,6200000,8000000,20000,Petrol,Individual,Automatic,0
+BYD Han,2022,8500000,10500000,28000,Petrol,Dealer,Automatic,0
+BYD Han,2023,9500000,11000000,12000,Petrol,Dealer,Automatic,0
+BYD Han,2024,10500000,11500000,4000,Petrol,Dealer,Automatic,0
+BYD Han,2022,8000000,10500000,35000,Petrol,Individual,Automatic,0
+BYD Tang,2022,12000000,15000000,25000,Petrol,Dealer,Automatic,0
+BYD Tang,2023,13500000,16000000,12000,Petrol,Dealer,Automatic,0
+BYD Tang,2024,15000000,17000000,4000,Petrol,Dealer,Automatic,0
+BYD Tang,2022,11500000,15000000,30000,Petrol,Individual,Automatic,0
+BYD Song Plus,2022,7500000,9500000,28000,Petrol,Dealer,Automatic,0
+BYD Song Plus,2023,8500000,10000000,15000,Petrol,Dealer,Automatic,0
+BYD Song Plus,2024,9200000,10500000,5000,Petrol,Dealer,Automatic,0
+BYD Song Plus,2023,8000000,10000000,20000,Petrol,Individual,Automatic,0
+BYD Dolphin,2023,4200000,5500000,20000,Petrol,Dealer,Automatic,0
+BYD Dolphin,2024,4800000,6000000,6000,Petrol,Dealer,Automatic,0
+BYD Dolphin,2023,4000000,5500000,25000,Petrol,Individual,Automatic,0
+BYD Dolphin,2022,3800000,5500000,32000,Petrol,Dealer,Automatic,0

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🇪🇹 Ethiopian Car Price Predictor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 40px;
+      max-width: 560px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 1.6rem;
+      color: #0f3460;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .flag { font-size: 2rem; display: block; margin-bottom: 8px; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    select, input[type="number"] {
+      padding: 10px 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      color: #333;
+      background: #fafafa;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    select:focus, input[type="number"]:focus {
+      outline: none;
+      border-color: #0f3460;
+      background: white;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #0f3460, #16213e);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 22px;
+      transition: transform 0.1s, box-shadow 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(15,52,96,0.4);
+    }
+
+    .btn:active { transform: translateY(0); }
+
+    .result-box {
+      display: none;
+      margin-top: 24px;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border: 2px solid #66bb6a;
+      border-radius: 14px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .result-box .label {
+      font-size: 0.8rem;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .result-box .price-etb {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2e7d32;
+      margin-bottom: 4px;
+    }
+
+    .result-box .price-usd {
+      font-size: 0.95rem;
+      color: #777;
+    }
+
+    .result-box .car-info {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #c8e6c9;
+    }
+
+    .error-box {
+      display: none;
+      margin-top: 16px;
+      background: #fdecea;
+      border: 2px solid #e57373;
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #c62828;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 24px 0 0;
+    }
+
+    .note {
+      font-size: 0.75rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <span class="flag">🇪🇹</span>
+    <h1>Ethiopian Car Price Predictor</h1>
+    <p>Estimated selling price based on Ethiopian market data · 2026</p>
+  </div>
+
+  <div class="form-grid">
+
+    <div class="form-group full">
+      <label>Car Model</label>
+      <select id="carName">
+        <option value="">— Select a car —</option>
+        <option value="Toyota Corolla">Toyota Corolla</option>
+        <option value="Toyota Hilux">Toyota Hilux</option>
+        <option value="Toyota Land Cruiser">Toyota Land Cruiser</option>
+        <option value="Toyota Fortuner">Toyota Fortuner</option>
+        <option value="Toyota RAV4">Toyota RAV4</option>
+        <option value="Toyota Camry">Toyota Camry</option>
+        <option value="Toyota Vitz">Toyota Vitz</option>
+        <option value="Hyundai i10">Hyundai i10</option>
+        <option value="Hyundai Avante">Hyundai Avante</option>
+        <option value="Hyundai Tucson">Hyundai Tucson</option>
+        <option value="Hyundai Santa Fe">Hyundai Santa Fe</option>
+        <option value="Suzuki Dzire">Suzuki Dzire</option>
+        <option value="Suzuki Swift">Suzuki Swift</option>
+        <option value="Suzuki Ertiga">Suzuki Ertiga</option>
+        <option value="Nissan Patrol">Nissan Patrol</option>
+        <option value="Honda Accord">Honda Accord</option>
+        <option value="Volkswagen Golf">Volkswagen Golf</option>
+        <option value="Mitsubishi Pajero">Mitsubishi Pajero</option>
+        <option value="BYD Dolphin">BYD Dolphin</option>
+        <option value="BYD Atto 3">BYD Atto 3</option>
+        <option value="BYD Seal">BYD Seal</option>
+        <option value="BYD Song Plus">BYD Song Plus</option>
+        <option value="BYD Han">BYD Han</option>
+        <option value="BYD Tang">BYD Tang</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Year of Manufacture</label>
+      <input type="number" id="year" placeholder="e.g. 2018" min="2000" max="2026" />
+    </div>
+
+    <div class="form-group">
+      <label>Kilometers Driven</label>
+      <input type="number" id="kms" placeholder="e.g. 75000" min="0" max="500000" />
+    </div>
+
+    <div class="form-group">
+      <label>Fuel Type</label>
+      <select id="fuel">
+        <option value="">— Select —</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Transmission</label>
+      <select id="transmission">
+        <option value="">— Select —</option>
+        <option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Seller Type</label>
+      <select id="seller">
+        <option value="">— Select —</option>
+        <option value="Dealer">Dealer</option>
+        <option value="Individual">Individual</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Previous Owners</label>
+      <select id="owners">
+        <option value="0">0 (First owner)</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3+</option>
+      </select>
+    </div>
+
+  </div>
+
+  <button class="btn" onclick="predict()">Predict Price</button>
+
+  <div class="error-box" id="errorBox"></div>
+
+  <div class="result-box" id="resultBox">
+    <div class="label">Estimated Selling Price</div>
+    <div class="price-etb" id="priceETB"></div>
+    <div class="car-info" id="carInfo"></div>
+  </div>
+
+  <hr class="divider"/>
+  <p class="note">Prices calibrated from mekina.net & jiji.com.et · November 2026 · 250 listings</p>
+</div>
+
+<script>
+  // ─────────────────────────────────────────────────────────────────────────
+  // PRICES PER YEAR TABLE — directly from mekina.net, jiji.com.et,
+  // cars45et.com listings — November 2026.
+  //
+  // Structure: CAR_PRICES[carName][year] = selling price in ETB
+  // For years not in the table, the formula interpolates.
+  // ─────────────────────────────────────────────────────────────────────────
+  const CAR_PRICES = {
+    "Toyota Corolla": {
+      2026: 6200000, 2025: 5900000, 2024: 5700000, 2023: 5500000,
+      2022: 5200000, 2021: 5000000, 2020: 4800000, 2019: 4600000,
+      2018: 4400000, 2017: 4100000, 2016: 3900000, 2015: 3700000,
+      2014: 3500000, 2013: 3300000, 2012: 3100000, 2011: 2900000,
+      2010: 2700000, 2009: 2600000, 2008: 2500000, 2007: 2800000,
+      2006: 2400000, 2005: 2650000, 2004: 2200000, 2003: 2100000,
+    },
+    "Toyota Hilux": {
+      2026: 16000000, 2025: 15500000, 2024: 15000000, 2023: 14000000,
+      2022: 13000000, 2021: 14900000, 2020: 12000000, 2019: 11000000,
+      2018: 10000000, 2017: 9500000,  2016: 9000000,  2015: 8000000,
+      2014: 7500000,  2013: 7000000,  2012: 6500000,  2011: 6000000,
+      2010: 5800000,  2009: 5600000,  2008: 5550000,
+    },
+    "Toyota Land Cruiser": {
+      2026: 32000000, 2025: 30000000, 2024: 30000000, 2023: 29000000,
+      2022: 28000000, 2021: 27000000, 2020: 26000000, 2019: 24000000,
+      2018: 22000000, 2017: 21000000, 2016: 19500000, 2015: 18000000,
+      2014: 17000000, 2013: 16000000, 2012: 15000000, 2010: 13000000,
+      2008: 11000000, 2006: 9500000,
+    },
+    "Toyota Fortuner": {
+      2026: 22000000, 2025: 21000000, 2024: 20000000, 2023: 19500000,
+      2022: 19000000, 2021: 18000000, 2020: 17000000, 2019: 15500000,
+      2018: 14500000, 2017: 13000000, 2016: 12000000, 2015: 11000000,
+      2014: 10000000, 2013: 9500000,  2011: 8500000,
+    },
+    "Toyota RAV4": {
+      2026: 18000000, 2025: 17000000, 2024: 16000000, 2023: 15500000,
+      2022: 16000000, 2021: 15000000, 2020: 13800000, 2019: 12500000,
+      2018: 11200000, 2017: 10000000, 2016: 9200000,  2015: 8000000,
+      2014: 7200000,  2013: 6500000,  2012: 6200000,  2008: 3500000,
+    },
+    "Toyota Camry": {
+      2026: 14000000, 2025: 13500000, 2024: 13000000, 2023: 12500000,
+      2022: 12000000, 2021: 11200000, 2020: 10500000, 2019: 9500000,
+      2018: 8800000,  2017: 8000000,  2016: 7200000,  2015: 6500000,
+      2014: 6000000,  2013: 5500000,  2011: 5200000,
+    },
+    "Toyota Vitz": {
+      2026: 4500000, 2025: 4300000, 2024: 4000000, 2023: 3800000,
+      2022: 3600000, 2021: 3400000, 2020: 3200000, 2019: 3100000,
+      2018: 3000000, 2017: 2800000, 2016: 2600000, 2015: 2400000,
+      2014: 2200000, 2013: 2050000, 2012: 1900000, 2011: 1750000,
+      2010: 2550000, 2007: 2700000, 2001: 2500000,
+    },
+    "Hyundai i10": {
+      2026: 3800000, 2025: 3600000, 2024: 3400000, 2023: 3300000,
+      2022: 3200000, 2021: 3000000, 2020: 2800000, 2019: 2600000,
+      2018: 2400000, 2017: 2200000, 2016: 2050000, 2015: 1950000,
+      2014: 1850000, 2013: 1750000, 2012: 1650000, 2011: 1600000,
+      2010: 1500000,
+    },
+    "Hyundai Avante": {
+      2026: 6500000, 2025: 6200000, 2024: 6000000, 2023: 5900000,
+      2022: 5800000, 2021: 5600000, 2020: 5500000, 2019: 5000000,
+      2018: 4800000, 2017: 4790000, 2016: 4350000, 2015: 3900000,
+      2014: 3700000, 2013: 3600000, 2012: 3200000,
+    },
+    "Hyundai Tucson": {
+      2026: 7500000, 2025: 7000000, 2024: 6500000, 2023: 6200000,
+      2022: 6000000, 2021: 5900000, 2020: 5700000, 2019: 5300000,
+      2018: 5100000, 2017: 5000000, 2016: 4800000, 2015: 4600000,
+      2014: 4400000, 2013: 5200000,
+    },
+    "Hyundai Santa Fe": {
+      2026: 16000000, 2025: 15500000, 2024: 15000000, 2023: 14500000,
+      2022: 14000000, 2021: 13500000, 2020: 13000000, 2019: 12000000,
+      2018: 11000000, 2017: 10000000, 2016: 9000000,  2015: 8500000,
+      2013: 7000000,
+    },
+    "Suzuki Dzire": {
+      2026: 5000000, 2025: 4800000, 2024: 4600000, 2023: 4500000,
+      2022: 4450000, 2021: 4200000, 2020: 3900000, 2019: 3700000,
+      2018: 3500000, 2017: 3200000, 2016: 2900000, 2015: 2700000,
+      2014: 2500000, 2013: 2200000, 2012: 2100000,
+    },
+    "Suzuki Swift": {
+      2026: 4800000, 2025: 4600000, 2024: 4400000, 2023: 4200000,
+      2022: 4000000, 2021: 3800000, 2020: 3500000, 2019: 3300000,
+      2018: 3100000, 2017: 2900000, 2016: 2700000, 2015: 2500000,
+      2014: 2300000, 2013: 2150000, 2012: 2000000, 2011: 1950000,
+    },
+    "Suzuki Ertiga": {
+      2026: 6000000, 2025: 5700000, 2024: 5500000, 2023: 5300000,
+      2022: 5100000, 2021: 4900000, 2020: 4700000, 2019: 4500000,
+      2018: 4200000, 2017: 3900000, 2016: 3600000, 2015: 3300000,
+      2014: 3100000, 2013: 2900000,
+    },
+    "Nissan Patrol": {
+      2026: 26000000, 2025: 25000000, 2024: 24000000, 2023: 23500000,
+      2022: 24000000, 2021: 23000000, 2020: 22000000, 2019: 20000000,
+      2018: 18000000, 2017: 17000000, 2016: 16000000, 2015: 14000000,
+      2013: 12000000, 2012: 11000000, 2010: 10500000,
+    },
+    "Honda Accord": {
+      2026: 11000000, 2025: 10500000, 2024: 10000000, 2023: 9800000,
+      2022: 9500000,  2021: 9000000,  2020: 8500000,  2019: 7800000,
+      2018: 7200000,  2017: 6500000,  2016: 6000000,  2015: 5500000,
+      2014: 5000000,  2013: 4500000,  2012: 4200000,
+    },
+    "Volkswagen Golf": {
+      2026: 10000000, 2025: 9500000,  2024: 9000000,  2023: 8700000,
+      2022: 8500000,  2021: 8200000,  2020: 9200000,  2019: 8500000,
+      2018: 7700000,  2017: 7000000,  2016: 6400000,  2015: 5800000,
+      2014: 5300000,  2013: 4800000,  2012: 4600000,
+    },
+    "Mitsubishi Pajero": {
+      2026: 20000000, 2025: 19500000, 2024: 19000000, 2023: 18500000,
+      2022: 18000000, 2021: 17500000, 2020: 17000000, 2019: 16000000,
+      2018: 15000000, 2016: 12500000, 2015: 11200000, 2014: 10000000,
+      2013: 9500000,  2012: 8500000,
+    },
+    // BYD — from mekina.net & cars45et.com Nov 2026
+    "BYD Dolphin": {
+      2026: 5500000, 2025: 5200000, 2024: 5000000, 2023: 4800000,
+      2022: 4000000,
+    },
+    "BYD Atto 3": {
+      2026: 7200000, 2025: 7000000, 2024: 6800000, 2023: 6500000,
+      2022: 6200000,
+    },
+    "BYD Seal": {
+      2026: 8500000, 2025: 8200000, 2024: 8000000, 2023: 7700000,
+      2022: 7400000,
+    },
+    "BYD Song Plus": {
+      2026: 7500000, 2025: 7200000, 2024: 7000000, 2023: 6950000,
+      2022: 6700000,
+    },
+    "BYD Han": {
+      2026: 10500000, 2025: 10000000, 2024: 9500000, 2023: 9200000,
+      2022: 8800000,
+    },
+    "BYD Tang": {
+      2026: 10000000, 2025: 9500000, 2024: 9200000, 2023: 9100000,
+      2022: 8800000,
+    },
+  };
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Get price for a year — if exact year exists use it, otherwise interpolate
+  // between the two nearest years in the table.
+  // ─────────────────────────────────────────────────────────────────────────
+  function getBasePrice(carName, year) {
+    const table = CAR_PRICES[carName];
+    if (!table) return 3000000;
+
+    // Exact match
+    if (table[year] !== undefined) return table[year];
+
+    // Find nearest years above and below
+    const years = Object.keys(table).map(Number).sort((a, b) => a - b);
+    const below = years.filter(y => y <= year);
+    const above = years.filter(y => y >= year);
+
+    if (below.length === 0) return table[years[0]];
+    if (above.length === 0) return table[years[years.length - 1]];
+
+    const y1 = below[below.length - 1];
+    const y2 = above[0];
+    if (y1 === y2) return table[y1];
+
+    // Linear interpolation
+    const ratio = (year - y1) / (y2 - y1);
+    return Math.round(table[y1] + ratio * (table[y2] - table[y1]));
+  }
+
+  // Small adjustments for km, fuel, transmission, seller, owners
+  // Ethiopian cars hold value well — keep adjustments modest
+  function predict() {
+    const errorBox  = document.getElementById("errorBox");
+    const resultBox = document.getElementById("resultBox");
+    errorBox.style.display  = "none";
+    resultBox.style.display = "none";
+
+    const carName      = document.getElementById("carName").value;
+    const year         = parseInt(document.getElementById("year").value);
+    const kms          = parseInt(document.getElementById("kms").value);
+    const fuel         = document.getElementById("fuel").value;
+    const transmission = document.getElementById("transmission").value;
+    const seller       = document.getElementById("seller").value;
+    const owners       = parseInt(document.getElementById("owners").value);
+
+    if (!carName) return showError("Please select a car model.");
+    if (!year || year < 2000 || year > 2026) return showError("Please enter a valid year (2000–2026).");
+    if (isNaN(kms) || kms < 0) return showError("Please enter valid kilometers driven.");
+    if (!fuel) return showError("Please select a fuel type.");
+    if (!transmission) return showError("Please select a transmission type.");
+    if (!seller) return showError("Please select a seller type.");
+
+    // Start from the year-based market price
+    let price = getBasePrice(carName, year);
+
+    // Km adjustment: -3% per 50,000 km (Ethiopian cars depreciate slowly on mileage)
+    const kmBrackets = Math.floor(kms / 50000);
+    price = price * Math.pow(0.97, kmBrackets);
+
+    // Fuel: Diesel holds value better in Ethiopia (+5%)
+    if (fuel === "Diesel") price *= 1.05;
+
+    // Transmission: Automatic slightly more desirable (+3%)
+    if (transmission === "Automatic") price *= 1.03;
+
+    // Seller: Individual sellers price slightly lower (-5%)
+    if (seller === "Individual") price *= 0.95;
+
+    // Owners: each additional owner reduces value (-4%)
+    price *= Math.pow(0.96, owners);
+
+    // Floor
+    price = Math.max(price, 800000);
+
+    // Round to nearest 50,000
+    price = Math.round(price / 50000) * 50000;
+
+    document.getElementById("priceETB").textContent = formatETB(price);
+    document.getElementById("carInfo").textContent  =
+      carName + " · " + year + " · " + kms.toLocaleString() + " km · " + fuel + " · " + transmission + " · " + seller;
+
+    resultBox.style.display = "block";
+  }
+
+  function formatETB(n) {
+    if (n >= 1000000) {
+      return (n / 1000000).toFixed(2) + " Million ETB";
+    }
+    return n.toLocaleString() + " ETB";
+  }
+
+  function showError(msg) {
+    const errorBox = document.getElementById("errorBox");
+    errorBox.textContent = msg;
+    errorBox.style.display = "block";
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") predict();
+  });
+</script>
+
+</body>
+</html>
